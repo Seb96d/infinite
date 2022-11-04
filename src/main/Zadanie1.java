@@ -14,7 +14,7 @@ public class Zadanie1 {
         }
         System.out.println("Numbers : " + intList);
 
-        if (!operator.equals("+") || !operator.equals("-") || !operator.equals("*") ) {
+        if (!(operator.equals("+") || operator.equals("-") || operator.equals("*")) ) {
             Scanner scanner = new Scanner(System.in);
             System.out.println("No mathematical operator given, choose \"+\",\"-\",\"*\" to do operations on given numbers or press Enter to skip");
             operator = scanner.nextLine();
