@@ -1,0 +1,62 @@
+Zadanie 1
+Proszę zaimplementować funkcję która:
+• na wejściu dostaje string zawierający dowolną ilość liczb przedzielonych separatorem
+separator w wejściowym stringu jest w grupie możliwych separatorów (tzn. string może wyglądać tak:
+12,34.56;67)
+•
+• na końcu wejściowego stringa może pojawić się znak odpowiadający za działanie (np. + - )
+na wyjściu mamy otrzymać liczbę będącą wynikiem działania z poprzedniego podpunktu na liczbach z
+wejściowego stringa
+•
+
+Zadanie 2
+Proszę zaimplementować zestaw testów jednostkowych do rozwiązania zadania 1.
+Zadanie 3
+
+Proszę zaprojektować strukturę klas opisującą następujący problem:
+mamy obiekt dokument, który potrafi zwrócić wystawce dokumentu, odbiorcę dokumentu, datę
+wystawienia, numer dokumentu.
+•
+mamy obiekty zamówienie i faktura które są szczególnymi typami dokumentu. Zamówienie
+dodatkowo posiada pole termin realizacji, faktura posiada pole typ faktury.
+•
+• każdy dokument posiada metodę getRabat()
+Proszę zaimplementuj metody getRabat() które dla faktury pobiorą rabat z nagłówka faktury a dla zamówienia
+z danych odbiorcy dokumentu.
+Proszę zaprojektować strukturę klas która pozwoli wyeksportować dokument w rożnych postaciach np.:
+HTML,CSV,XML.
+
+Zadanie 4
+Załóżmy że mamy aplikację w której znajduje się między innymi następujący serwis aplikacyjny:
+public class InvoiceService {
+private InvoiceRepository repository;
+public InvoiceService(InvoiceRepository repository) {
+this.repository = repository;
+}
+public Invoice getInvoice(String invoiceNumber) {
+return repository.find(invoiceNumber);
+}
+}
+
+oraz interfejs:
+public interface InvoiceRepository {
+Invoice find(String invoiceNumber);
+}
+
+i jego implementacja:
+public class InvoiceJpaRepository implements InvoiceRepository {
+@Override
+public Invoice find(final String invoiceNumber) {
+// ... implementation
+}
+}
+
+Operacja pobierania faktury z repozytorium jest operacją kosztowną.
+Proszę dodać możliwość cache-owania wyników zwracanych z bazy danych, przy założeniu, że nie możemy
+zmienić implementacji klas: InvoiceJpaRepository, InvoiceService.
+Przyjmijmy, że implementacja klasy Invoice ma postać:
+public class Invoice {
+private String invoiceNumber;
+private Object invoiceData;
+//... constructor, getters, setters
+}
