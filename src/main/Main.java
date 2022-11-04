@@ -1,9 +1,15 @@
 package main;
 
+import java.util.Scanner;
+
 public class Main {
 
     public static void main(String[] args) {
-        System.out.println(Zadanie1.seperateAndCalculate(".a'2.4.7,./.,lk9aaax"));
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter string to extract numbers from");
+        String string = scanner.next();
+        System.out.println(Zadanie1.seperateAndCalculate(string));
+        scanner.close();
 
     }
 

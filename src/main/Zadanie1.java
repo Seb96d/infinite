@@ -1,5 +1,6 @@
 package main;
 
+
 import java.util.*;
 
 public class Zadanie1 {
@@ -16,36 +17,35 @@ public class Zadanie1 {
 
         if (!(operator.equals("+") || operator.equals("-") || operator.equals("*")) ) {
             Scanner scanner = new Scanner(System.in);
-            System.out.println("No mathematical operator given, choose \"+\",\"-\",\"*\" to do operations on given numbers or press Enter to skip");
+            System.out.println("No mathematical operator given, choose \"+\",\"-\",\"*\" to do operations on given numbers or type anything else to skip");
             operator = scanner.nextLine();
             if (operator.isEmpty()){
                 System.out.println("Pressed enter");
             }
             scanner.close();
-            switch (operator) {
-                case "+":
-                    int sum = 0;
-                    for (int x : intList) {
-                        sum = sum+x;
-                    }
-                    return sum;
-                case "-":
-                    int subtraction = intList.get(0);
-                    for (int x : intList.subList(1, intList.size())) {
-                        subtraction = subtraction-x;
-                    }
-                    return subtraction;
-                case "*":
-                    int multiplication = intList.get(0);
-                    for (int x : intList.subList(1, intList.size())) {
-                        multiplication = multiplication * x;
-                    }
-                    return multiplication;
-                default:
-                    return 0;
-            }
         }
-        return 0;
+        switch (operator) {
+            case "+":
+                int sum = 0;
+                for (int x : intList) {
+                    sum = sum+x;
+                }
+                return sum;
+            case "-":
+                int subtraction = intList.get(0);
+                for (int x : intList.subList(1, intList.size())) {
+                    subtraction = subtraction-x;
+                }
+                return subtraction;
+            case "*":
+                int multiplication = intList.get(0);
+                for (int x : intList.subList(1, intList.size())) {
+                    multiplication = multiplication * x;
+                }
+                return multiplication;
+            default:
+                return 0;
+        }
     }
     public static boolean isNumeric(String str){
         return str != null && str.matches("[0-9]+");
