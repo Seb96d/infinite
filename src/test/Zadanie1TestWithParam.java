@@ -1,9 +1,9 @@
-package main;
+package test;
 
+import main.Zadanie1;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-
 
 class Zadanie1TestWithParam {
     @Test
@@ -24,8 +24,4 @@ class Zadanie1TestWithParam {
         System.out.println(Zadanie1.seperateAndCalculate("a12lol3,;x*"));
         Assertions.assertEquals(36, 36);
     }
-
-/////////////////////////////////////////////////////////////////////
-
-
 }
