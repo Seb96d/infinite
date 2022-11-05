@@ -4,9 +4,8 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
 
-class Zadanie1Test {
+class Zadanie1TestWithParam {
     @Test
     @DisplayName("Should not ask for operator if it's given in parameter")
     public void testWithParam1() {
