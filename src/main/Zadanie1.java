@@ -20,7 +20,7 @@ public class Zadanie1 {
             System.out.println("No mathematical operator given, choose \"+\",\"-\",\"*\" to do operations on given numbers or type anything else to skip");
             operator = scanner.nextLine();
             if (operator.isEmpty()){
-                System.out.println("Pressed enter");
+                System.out.println("Skipped");
             }
             scanner.close();
         }
