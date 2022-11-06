@@ -6,11 +6,11 @@ public class Receiver {
     private String surname;
     private String address;
 
-    public Receiver(String name, String surname, String address, double rabat) {
+    public Receiver(String name, String surname, String address, double clientDiscount) {
         this.name = name;
         this.surname = surname;
         this.address = address;
-        this.clientDiscount = rabat;
+        this.clientDiscount = clientDiscount;
     }
 
 
@@ -20,7 +20,7 @@ public class Receiver {
                 "name='" + name + '\'' +
                 ", surname='" + surname + '\'' +
                 ", address='" + address + '\'' +
-                ", rabat=" + clientDiscount +
+                ", clientDiscount=" + clientDiscount +
                 '}';
     }
 

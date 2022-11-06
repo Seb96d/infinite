@@ -1,6 +1,6 @@
-package test;
+package main.zad2;
 
-import main.Zadanie1;
+import main.zad1.Zadanie1;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;

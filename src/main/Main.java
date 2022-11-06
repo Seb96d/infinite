@@ -1,23 +1,35 @@
 package main;
 
-import main.zad3.Dokument;
+import main.zad3.*;
 
-import java.time.LocalDate;
+import javax.xml.transform.TransformerException;
 import java.time.LocalDateTime;
-import java.util.Scanner;
+
+import static main.zad3.Dokument.saveToCSV;
 
 public class Main {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws TransformerException {
 //        Scanner scanner = new Scanner(System.in);
 //        System.out.println("Enter string to extract numbers from");
 //        String string = scanner.next();
 //        System.out.println(Zadanie1.seperateAndCalculate(string));
 //        scanner.close();
         LocalDateTime now = LocalDateTime.now();
-//        Dokument doc = new Dokument("123A", "John Smith", "Jane Doe", now);
-//        System.out.println(doc);
-
+        Sender sender = new Sender("Gold","Trader","Gold Farm");
+        Receiver receiver = new Receiver("New","Player","Respawn Point",5);
+        Dokument doc1 = new Dokument("D14", sender, receiver, now);
+        Dokument invoice1 = new Invoice("I48", sender, receiver, now, "pro_forma", 2.5);
+        Dokument order1 = new Order("O45", sender, receiver, now, now);
+        saveToCSV(doc1);
+        saveToCSV(invoice1);
+        saveToCSV(order1);
+        System.out.println("---------------------------------------------------------------------");
+//        System.out.println(DocToXML.printObjectToXML(doc1));
+        System.out.println("---------------------------------------------------------------------");
+//        DocToXML.printObjectToXML(invoice1);
+        System.out.println("---------------------------------------------------------------------");
+//        DocToXML.printObjectToXML(order1);
     }
 
 
