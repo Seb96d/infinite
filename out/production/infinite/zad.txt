@@ -11,6 +11,7 @@ wejściowego stringa
 
 Zadanie 2
 Proszę zaimplementować zestaw testów jednostkowych do rozwiązania zadania 1.
+
 Zadanie 3
 
 Proszę zaprojektować strukturę klas opisującą następujący problem:
