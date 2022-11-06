@@ -18,9 +18,22 @@ public class Invoice extends Dokument {
     }
     protected double discount;
 
-    public Invoice(String numerDokumentu, Sender wystawca, Receiver odbiorca, LocalDateTime dataWystawienia, invoiceTypes invoiceType) {
-                super(numerDokumentu, wystawca, odbiorca, dataWystawienia);
+    public Invoice(String documentNumber, Sender sender, Receiver receiver, LocalDateTime dateOfIssue, String invoiceType, double discount) {
+                super(documentNumber, sender, receiver, dateOfIssue);
         this.type = String.valueOf(invoiceType);
+        this.discount = discount;
+    }
+
+    @Override
+    public String toString() {
+        return "Invoice{" +
+                "type='" + type + '\'' +
+                ", discount=" + discount +
+                ", documentNumber='" + documentNumber + '\'' +
+                ", sender=" + sender +
+                ", receiver=" + receiver +
+                ", dateOfIssue=" + dateOfIssue +
+                '}';
     }
 }
 

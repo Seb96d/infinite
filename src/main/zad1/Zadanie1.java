@@ -1,4 +1,4 @@
-package main;
+package main.zad1;
 
 
 import java.util.*;

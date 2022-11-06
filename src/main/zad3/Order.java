@@ -1,18 +1,26 @@
 package main.zad3;
 
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 public class Order extends Dokument {
-    protected LocalDate terminRealizacji;
+    protected LocalDateTime realizationTime;
 
-    public Order(String numerDokumentu, Sender wystawca, Receiver odbiorca, LocalDateTime dataWystawienia) {
-        super(numerDokumentu, wystawca, odbiorca, dataWystawienia);
+    public Order(String documentNumber, Sender sender, Receiver receiver, LocalDateTime dateOfIssue, LocalDateTime realizationTime) {
+        super(documentNumber, sender, receiver, dateOfIssue);
+        this.realizationTime = realizationTime;
     }
-    
-    
 
-
+    @Override
+    public String toString() {
+        return "Order{" +
+                "realizationTime=" + realizationTime +
+                ", documentNumber='" + documentNumber + '\'' +
+                ", sender=" + sender +
+                ", receiver=" + receiver +
+                ", dateOfIssue=" + dateOfIssue +
+                ", client discount=" + receiver.clientDiscount +
+                '}';
+    }
 }
 
 /*

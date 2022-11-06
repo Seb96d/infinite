@@ -1,7 +1,6 @@
 package main.zad3;
 
 import java.time.LocalDateTime;
-
 public class Dokument {
     protected String documentNumber;
     protected Sender sender;
@@ -22,7 +21,36 @@ public class Dokument {
         this.dateOfIssue = dateOfIssue;
     }
 
-   
+    public String getDocumentNumber() {
+        return documentNumber;
+    }
+
+    public String getSender() {
+        return sender.toString();
+    }
+
+    public String getReceiver() {
+        return receiver.toString();
+    }
+
+    public LocalDateTime getDateOfIssue() {
+        return dateOfIssue;
+    }
+
+    @Override
+    public String toString() {
+        return "Dokument{" +
+                "documentNumber='" + documentNumber + '\'' +
+                ", sender=" + sender +
+                ", receiver=" + receiver +
+                ", dateOfIssue=" + dateOfIssue +
+                '}';
+    }
+
+    public static void saveToCSV(Dokument d){
+        DocToCSV.writeDocToCSV(d);
+    }
+
 }
 
 /*
