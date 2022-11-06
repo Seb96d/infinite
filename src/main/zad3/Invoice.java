@@ -1,12 +1,28 @@
 package main.zad3;
 
-//public interface DokumentInterface {
-//    private double getRabat(Dokument d) {
-//        int i = 0;
-//        return i;
-//    }
-//}
 
+import java.time.LocalDateTime;
+
+public class Invoice extends Dokument {
+    protected String type;
+    protected enum invoiceTypes{
+        Invoice_VAT_podstawowa,
+        Invoice_zaliczkowa,
+        Invoice_uproszczona,
+        Refakturowanie,
+        Samofakturowanie,
+        Invoice_VAT_marza,
+        Invoice_VAT_RR,
+        pro_forma,
+        Invoice_elektroniczna
+    }
+    protected double discount;
+
+    public Invoice(String numerDokumentu, Sender wystawca, Receiver odbiorca, LocalDateTime dataWystawienia, invoiceTypes invoiceType) {
+                super(numerDokumentu, wystawca, odbiorca, dataWystawienia);
+        this.type = String.valueOf(invoiceType);
+    }
+}
 
 
 /*
