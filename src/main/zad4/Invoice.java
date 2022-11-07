@@ -1,6 +1,6 @@
 package main.zad4;
 
-public class Invoice {
+public class Invoice{
     private String invoiceNumber;
     private Object invoiceData;
 
@@ -25,6 +25,4 @@ public class Invoice {
     public void setInvoiceData(Object invoiceData) {
         this.invoiceData = invoiceData;
     }
-
-
 }

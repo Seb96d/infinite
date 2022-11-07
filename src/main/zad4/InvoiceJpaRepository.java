@@ -7,6 +7,8 @@ public class InvoiceJpaRepository implements InvoiceRepository {
         return null;
     }
 
-
-
+//    @Override
+//    public void cacheInvoice(Invoice invoice) {
+//
+//    }
 }

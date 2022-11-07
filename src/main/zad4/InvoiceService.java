@@ -5,7 +5,7 @@ public class InvoiceService {
     public InvoiceService(InvoiceRepository repository) {
         this.repository = repository;
     }
-    public Invoice getInvoice(String invoiceNumber) {
-        return repository.find(invoiceNumber);
-    }
+//    public Invoice getInvoice(String invoiceNumber) {
+//        return repository.find(invoiceNumber);
+//    }
 }
