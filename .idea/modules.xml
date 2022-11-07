@@ -3,6 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/infinite.iml" filepath="$PROJECT_DIR$/infinite.iml" />
+      <module fileurl="file://$PROJECT_DIR$/json_data_type.iml" filepath="$PROJECT_DIR$/json_data_type.iml" />
+      <module fileurl="file://$PROJECT_DIR$/json_datatype/json_datatype.iml" filepath="$PROJECT_DIR$/json_datatype/json_datatype.iml" />
     </modules>
   </component>
 </project>
