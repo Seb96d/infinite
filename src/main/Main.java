@@ -6,6 +6,8 @@ import main.zad3.*;
 import javax.xml.transform.TransformerException;
 import java.io.IOException;
 import java.time.LocalDateTime;
+import java.util.HashMap;
+import java.util.Map;
 
 import static main.zad3.Dokument.saveToCSV;
 import static main.zad3.Dokument.saveToJSON;
@@ -24,17 +26,17 @@ public class Main {
         Dokument doc1 = new Dokument("D14", sender, receiver, now);
         Dokument invoice1 = new Invoice("I48", sender, receiver, now, "pro_forma", 2.5);
         Dokument order1 = new Order("O45", sender, receiver, now, now);
+
         saveToCSV(doc1);
         saveToCSV(invoice1);
         saveToCSV(order1);
+
         saveToJSON(doc1);
 
-        System.out.println("---------------------------------------------------------------------");
-//        System.out.println(DocToXML.printObjectToXML(doc1));
-        System.out.println("---------------------------------------------------------------------");
-//        DocToXML.printObjectToXML(invoice1);
-        System.out.println("---------------------------------------------------------------------");
-//        DocToXML.printObjectToXML(order1);
+        Map<String, Object> cachedInvoices = new HashMap<>();
+        main.zad4.Invoice invoice2 = new main.zad4.Invoice("Invoice", invoice1);
+        cachedInvoices.put(invoice2.getInvoiceNumber(),invoice2.getInvoiceData());
+
     }
 
 
