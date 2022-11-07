@@ -32,32 +32,30 @@ Załóżmy że mamy aplikację w której znajduje się między innymi następuj�
 public class InvoiceService {
 private InvoiceRepository repository;
 public InvoiceService(InvoiceRepository repository) {
-this.repository = repository;
-}
+        this.repository = repository;
+    }
 public Invoice getInvoice(String invoiceNumber) {
-return repository.find(invoiceNumber);
+        return repository.find(invoiceNumber);
+    }
 }
-}
-
 oraz interfejs:
 public interface InvoiceRepository {
-Invoice find(String invoiceNumber);
-}
+        Invoice find(String invoiceNumber);
+    }
 
 i jego implementacja:
 public class InvoiceJpaRepository implements InvoiceRepository {
 @Override
 public Invoice find(final String invoiceNumber) {
-// ... implementation
+    // ... implementation
+    }
 }
-}
-
 Operacja pobierania faktury z repozytorium jest operacją kosztowną.
 Proszę dodać możliwość cache-owania wyników zwracanych z bazy danych, przy założeniu, że nie możemy
 zmienić implementacji klas: InvoiceJpaRepository, InvoiceService.
 Przyjmijmy, że implementacja klasy Invoice ma postać:
 public class Invoice {
-private String invoiceNumber;
-private Object invoiceData;
-//... constructor, getters, setters
-}
+        private String invoiceNumber;
+        private Object invoiceData;
+        //... constructor, getters, setters
+    }

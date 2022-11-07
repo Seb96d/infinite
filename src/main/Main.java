@@ -8,6 +8,7 @@ import java.io.IOException;
 import java.time.LocalDateTime;
 
 import static main.zad3.Dokument.saveToCSV;
+import static main.zad3.Dokument.saveToJSON;
 
 public class Main {
 
@@ -26,7 +27,7 @@ public class Main {
         saveToCSV(doc1);
         saveToCSV(invoice1);
         saveToCSV(order1);
-//        saveToJSON(doc1);
+        saveToJSON(doc1);
 
         System.out.println("---------------------------------------------------------------------");
 //        System.out.println(DocToXML.printObjectToXML(doc1));
