@@ -1,13 +1,29 @@
 <component name="libraryTable">
   <library name="lib">
+    <ANNOTATIONS>
+      <root url="file://$PROJECT_DIR$/json_data_type" />
+    </ANNOTATIONS>
     <CLASSES>
       <root url="file://$PROJECT_DIR$/lib" />
+      <root url="file://$PROJECT_DIR$/lib" />
+      <root url="file://$PROJECT_DIR$/json_data_type" />
+      <root url="file://$PROJECT_DIR$/json_data_type" />
     </CLASSES>
-    <JAVADOC />
+    <JAVADOC>
+      <root url="file://$PROJECT_DIR$/json_data_type" />
+    </JAVADOC>
+    <NATIVE>
+      <root url="file://$PROJECT_DIR$/json_data_type" />
+    </NATIVE>
     <SOURCES>
       <root url="file://$PROJECT_DIR$/lib" />
+      <root url="file://$PROJECT_DIR$/json_data_type" />
+      <root url="file://$PROJECT_DIR$/json_data_type" />
     </SOURCES>
+    <jarDirectory url="file://$PROJECT_DIR$/json_data_type" recursive="false" />
     <jarDirectory url="file://$PROJECT_DIR$/lib" recursive="false" />
+    <jarDirectory url="file://$PROJECT_DIR$/lib" recursive="false" />
+    <jarDirectory url="file://$PROJECT_DIR$/json_data_type" recursive="false" type="SOURCES" />
     <jarDirectory url="file://$PROJECT_DIR$/lib" recursive="false" type="SOURCES" />
   </library>
 </component>

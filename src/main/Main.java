@@ -1,15 +1,17 @@
 package main;
 
+import com.fasterxml.jackson.databind.exc.InvalidDefinitionException;
 import main.zad3.*;
 
 import javax.xml.transform.TransformerException;
+import java.io.IOException;
 import java.time.LocalDateTime;
 
 import static main.zad3.Dokument.saveToCSV;
 
 public class Main {
 
-    public static void main(String[] args) throws TransformerException {
+    public static void main(String[] args) throws TransformerException, IOException, InvalidDefinitionException {
 //        Scanner scanner = new Scanner(System.in);
 //        System.out.println("Enter string to extract numbers from");
 //        String string = scanner.next();
@@ -24,6 +26,8 @@ public class Main {
         saveToCSV(doc1);
         saveToCSV(invoice1);
         saveToCSV(order1);
+//        saveToJSON(doc1);
+
         System.out.println("---------------------------------------------------------------------");
 //        System.out.println(DocToXML.printObjectToXML(doc1));
         System.out.println("---------------------------------------------------------------------");
