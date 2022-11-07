@@ -1,5 +1,6 @@
 package main.zad3;
 
+import java.io.IOException;
 import java.time.LocalDateTime;
 public class Dokument {
     protected String documentNumber;
@@ -49,6 +50,9 @@ public class Dokument {
 
     public static void saveToCSV(Dokument d){
         DocToCSV.writeDocToCSV(d);
+    }
+    public static void saveToJSON(Dokument d) throws IOException {
+        DocToJSON.writeDocToJSON(d);
     }
 
 }
